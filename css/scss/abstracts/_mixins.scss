@@ -1,0 +1,23 @@
+@mixin only-small {
+  @media (max-width: #{$bp-up-to-medium}) {
+    @content;
+  }
+}
+ 
+@mixin medium {
+  @media (min-width: #{$bp-medium}) {
+    @content;
+  }
+}
+
+@mixin up-to-large {
+  @media (max-width: #{$bp-up-to-large}) {
+    @content;
+  }
+}
+ 
+@mixin large {
+  @media (min-width: #{$bp-large}) {
+    @content;
+  }
+}
