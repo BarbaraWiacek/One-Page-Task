@@ -1,5 +1,4 @@
 // Mobile navigation
-
 function toggleMobileNav() {
     const navClass = document.querySelector('.header_nav--list').classList;
     const headerClass = document.querySelector('.header_nav').classList;
@@ -13,7 +12,6 @@ function toggleMobileNav() {
 }
 
 // Smooth scrolling
-
 function smoothScrollTo(e) {
     window.scrollTo({
         left: 0,
@@ -22,9 +20,7 @@ function smoothScrollTo(e) {
     });
 }
 
-
 // Slider
-
 let activeIndex = 1;
 const slides = document.getElementsByClassName("gallery_image");
 

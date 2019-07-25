@@ -6,15 +6,14 @@
   }
 }
 
-.md {
-  @include medium {
+@include medium {
+  .md {
     &-fl {
       float: left;
       margin-right: 10px;
     }
   }
 }
-
 
 @include large {
   .lg {

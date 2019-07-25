@@ -1,7 +1,6 @@
 // Slide-down Navigation
 
 @include up-to-large {
-
   .header_nav--icon {
     margin: 15px 5px;
   }
@@ -39,7 +38,6 @@
 // Large-screens Navigation
 
 @include large {
-
   .header_nav--icon {
     display: none;
   }
