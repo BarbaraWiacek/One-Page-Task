@@ -2,15 +2,19 @@ $main-font: 'Muli', sans-serif;
 $black: rgb(18, 18, 18);
 $text-color: rgb(102, 102, 102);
 $text-color-light: rgb(145, 145, 145);
-$accent-color: rgb(24, 152, 237);
+$accent-color: rgb(107, 107, 142);
 $background-color: rgb(36, 38, 68);
 $white: rgb(255, 255, 255);
 
 $bold: 700;
+$medium-bold: 600;
 
 $bp-up-to-medium: 799px;
 $bp-medium: 800px;
 $bp-up-to-large: 1199px;
 $bp-large: 1200px;
 
-$page-padding-sm: 15px;
+$spacer-small: 10px;
+$spacer-medium: 15px;
+$spacer-large: 25px;
+$spacer-huge: 45px;

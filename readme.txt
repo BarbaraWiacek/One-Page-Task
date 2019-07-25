@@ -1,23 +1,22 @@
-To start out with the project:
+To view the page:
 
-1. Open a console in the project folder
-2. Set up a git repository:
+	Open index.html
 
-	> git init [my-rep]
+To run project for development:
 
-3. Set up grunt:
+1. Open console in the project folder
+2. Copy repository from github
 
-	> npm init
-	(follow the instructions from the console)
+	> git clone https://github.com/BarbaraWiacek/One-Page-Task
 
-	> npm install node-sass --save-dev
-	> npm install grunt
-	> npm install grunt --save-dev
-	> npm install grunt-sass --save-dev
-	> npm install grunt-contrib-watch --save-dev
-	> npm install grunt-sass-globbing --save-dev
-	> npm install grunt-contrib-cssmin --save-dev
+3. Set up dev environment:
 
-4. To run grunt:
+	> npm install
+
+4. (Optional) 
+	If you don't have it, install Live Server from Extensions in Visual Studio Code
+	Click on "Run live server"
+
+5. To run grunt:
 
 	> grunt dev

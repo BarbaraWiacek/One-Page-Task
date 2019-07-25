@@ -1,16 +1,34 @@
 .site_content {
-  padding: 0 $page-padding-sm;
+  padding: 0 $spacer-medium;
+
+  @include medium {
+    padding: 0 $spacer-large;
+  }
 }
 
 .article {
-  margin-bottom: 40px;
+  margin-bottom: $spacer-huge;
 
   img {
+    max-height: 60vh;
     width: 100%;
     height: auto;
+    object-fit: cover;
+    margin-bottom: $spacer-small;
+
+    @include medium {
+      width: 400px;
+      height: auto;
+      margin-bottom: 0;
+    }
   }
 }
 
 .article_header {
-  margin-bottom: 10px;
+  margin-bottom: $spacer-small;
+  max-width: 800px;
+
+  @include medium {
+    margin-bottom: $spacer-medium;
+  }
 }

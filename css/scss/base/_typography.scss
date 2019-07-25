@@ -9,12 +9,19 @@ a {
 
 h1 {
   font-weight: $bold;
-  font-size: 24px;
+  font-size: 26px;
   margin-bottom: 8px;
   color: $black;
 }
 
 h2 {
-  font-size: 16px;
+  font-weight: $medium-bold;
+  font-size: 18px;
   color: $black;
+  line-height: 1.2;
+}
+
+p {
+  margin-bottom: $spacer-small;
+  line-height: 1.2;
 }

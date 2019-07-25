@@ -1,4 +1,25 @@
 .site_footer {
   background-color: $background-color;
-  padding: 30px $page-padding-sm 15px;
+  padding: $spacer-large $spacer-medium;
+  text-align: center;
+}
+
+.footer-nav {
+  display: inline-block;
+
+  li {
+    display: inline-block;
+    padding: 0 5px;
+  }
+
+  a {
+    color: $white;
+    font-weight: $medium-bold;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
 }
