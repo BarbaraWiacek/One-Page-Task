@@ -11,10 +11,10 @@ To run project for development:
 
 3. Set up dev environment:
 
-	> npm install
+	> npm install OR yarn install
 
 4. (Optional) 
-	If you don't have it, install Live Server from Extensions in Visual Studio Code
+	If you don't have it, install "Live Server" from Extensions in Visual Studio Code
 	Click on "Run live server"
 
 5. To run grunt:

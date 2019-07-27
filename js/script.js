@@ -1,39 +1,47 @@
 // Mobile navigation
-function toggleMobileNav() {
-    const navClass = document.querySelector('.header_nav--list').classList;
-    const headerClass = document.querySelector('.header_nav').classList;
+const toggleMobileNav = (event) => {
+    event.preventDefault();
+    const navClass = document.querySelector('.header__nav--list').classList;
+    const headerClass = document.querySelector('.header__nav').classList;
     if (navClass.contains('closed')) {
         navClass.remove('closed');
-        headerClass.add("open");
+        headerClass.add('open');
     } else {
-        headerClass.remove("open");
+        headerClass.remove('open');
         setTimeout(() => navClass.add('closed'), 350);
     }
 }
 
 // Smooth scrolling
-function smoothScrollTo(e) {
-    window.scrollTo({
-        left: 0,
-        top: document.getElementById(e).offsetTop,
-        behavior: 'smooth'
+const links = document.querySelectorAll('.nav--link');
+
+Array.from(links).forEach(el => {
+    el.addEventListener('click', function (event) {
+        event.preventDefault();
+        const href = event.target.getAttribute('href');
+        window.scrollTo({
+            left: 0,
+            top: document.querySelector(href).offsetTop,
+            behavior: 'smooth'
+        });
     });
-}
+});
+
 
 // Slider
 let activeIndex = 1;
-const slides = document.getElementsByClassName("gallery_image");
+const slides = document.getElementsByClassName('gallery__image');
 
-function activeSlide(num) {
+const activeSlide = (num) => {
     activeIndex += num;
     if (activeIndex > slides.length) {
-        activeIndex = 1
+        activeIndex = 1;
     }
     if (activeIndex < 1) {
-        activeIndex = slides.length
+        activeIndex = slides.length;
     }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].classList.remove("active");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove('active');
     }
-    slides[activeIndex - 1].classList.add("active");
+    slides[activeIndex - 1].classList.add('active');
 }

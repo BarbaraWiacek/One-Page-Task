@@ -1,18 +1,23 @@
-.gallery_image img {
-  display: block;
-}
-
-.gallery_image--caption {
-  position: absolute;
-  font-size: 14px;
-}
-
-@include medium { 
-  .gallery_image {
+.gallery__image {
+  @include large {
     position: relative;
   }
 
-  .gallery_image--caption {
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  &:hover > .gallery__image--caption {
+    opacity: 1;
+  }
+}
+
+.gallery__image--caption {
+  position: absolute;
+  font-size: 14px;
+
+  @include medium {
     padding: 10px 15px;
     color: $white;
     background-color: rgba(0,0,0,0.4);
@@ -33,19 +38,9 @@
       bottom: 0;
     }
   }
-}
 
-@include large {
-  .article_gallery .gallery_image img {
-    width: 100%;
-  }
-
-  .gallery_image--caption {
+  @include large {
     opacity: 0;
     transition: opacity 0.3s;
-  }
-
-  .gallery_image:hover > .gallery_image--caption {
-    opacity: 1;
   }
 }

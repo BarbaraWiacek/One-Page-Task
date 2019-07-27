@@ -1,6 +1,6 @@
 $header-height: 70px;
 
-.site_header {
+.site__header {
   height: $header-height;
   padding: 8px $spacer-small;
   display: flex;
@@ -13,25 +13,12 @@ $header-height: 70px;
   }
 }
 
-.header_logo {
+.header__logo {
   height: 100%;
   margin-right: auto;
 
   img {
     height: 100%;
     width: auto;
-  }
-}
-
-.header_nav--list-item a {
-  color: $white;
-  font-weight: $bold;
-  padding: 12px 10px;
-  display: block;
-  text-decoration: none;
-  transition: background-color 0.3s;
-
-  &:hover {
-    background-color: $accent-color;
   }
 }

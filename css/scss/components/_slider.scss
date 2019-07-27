@@ -1,47 +1,35 @@
 $caption-padding: 30px;
 
-@include only-small {
-  .article_gallery {
+.gallery {
+  @include up-to-large {
     position: relative;
-    padding-bottom: $caption-padding;
   }
 
-  .gallery_image--caption {
-    height: $caption-padding;
-    bottom: 0;
+  &__container {
+    @include up-to-large {
+      overflow: hidden;
+      height: calc(300px + #{$caption-padding});
+      position: relative;
+    }
+
+    @include only-medium {  
+      width: 400px;
+      height: 300px;
+      margin: 0 auto;
+    }
   }
 
-  .prev, .next {
+  &__image--caption {
+    @include only-small {
+      height: $caption-padding;
+      bottom: 0;
+    }
+  }
+
+  &__button {
     position: absolute;
     top: calc(50% - #{$caption-padding}/2);
     transform: translateY(-50%);
-  }
-
-  .prev {
-    left: 0;
-  }
-
-  .next {
-    right: 0;
-  }
-}
-
-@include up-to-large {
-  .gallery_image {
-    animation-name: fade-in;
-    animation-duration: 1.5s;
-  }
-
-  .gallery_image:not(.active) {
-    display: none;
-  }
-  
-  @keyframes fade-in {
-    from { opacity: 0.4 }
-    to { opacity: 1 }
-  }
-
-  .prev, .next {
     cursor: pointer;
     width: auto;
     padding: 16px;
@@ -49,32 +37,62 @@ $caption-padding: 30px;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
+
+    &:hover {
+      background-color: $accent-color;
+    }
+
+    @include medium {
+      color: $black;
+      top: 50%;
+    }
+
+    &.prev {
+      left: 0;
+      @include medium {
+        left: calc(50% - 241.59px);
+      }
+    }
+
+    &.next {
+      right: 0;
+      @include medium {
+        right: calc(50% - 241.59px);
+      }
+    }
+
+    @include large {
+      display: none;
+    }
   }
 
-  .prev:hover, .next:hover {
-    background-color: $accent-color;
-  }
-}
+  &__image {
+    @include up-to-large {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition-duration: .4s;
+      opacity: 1;
 
-@include medium {
-  .article_gallery {
-    display: flex;
-    justify-content: center;
-  }
+      img {
+        height: 300px;
+      }
 
-  .prev, .next {
-    color: $black;
-    align-self: center;
-  }
+      &:not(.active) {
+        transform: translateX(-100%);
+      }
 
-  .prev {
-    order: -1;
-  }
-}
-
-@include large {
-  .prev,
-  .next {
-    display: none;
+      &.active {
+        transform: translateX(0);
+        opacity: 1;
+  
+        ~ .gallery__image {
+          transform: translateX(100%);
+        }
+      }
+    }
   }
 }

@@ -10,6 +10,12 @@
   }
 }
 
+@mixin only-medium {
+  @media (min-width: #{$bp-medium}) and (max-width: #{$bp-up-to-large}) {
+    @content;
+  }
+}
+
 @mixin up-to-large {
   @media (max-width: #{$bp-up-to-large}) {
     @content;

@@ -7,21 +7,21 @@ a {
   color: $text-color-light;
 }
 
-h1 {
+p {
+  margin-bottom: $spacer-small;
+  line-height: 1.2;
+}
+
+.article__heading {
   font-weight: $bold;
   font-size: 26px;
   margin-bottom: 8px;
   color: $black;
 }
 
-h2 {
+.article__subheading {
   font-weight: $medium-bold;
   font-size: 18px;
   color: $black;
-  line-height: 1.2;
-}
-
-p {
-  margin-bottom: $spacer-small;
   line-height: 1.2;
 }

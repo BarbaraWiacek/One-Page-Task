@@ -14,30 +14,30 @@
 		<meta name="msapplication-TileColor" content="#ffc40d">
 		<meta name="theme-color" content="#ffffff">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:400,600,700&display=swap">
-		<link rel="stylesheet" href="css/style.min.css" type="text/css">
+		<link rel="stylesheet" href="dist/style.css" type="text/css">
 		<title>One-page website made for the use of interviewing process at Aperto</title>
 	</head>
 	<body>
-		<header class="site_header">
-			<div class="header_logo"><img src="images/logo.svg" /></div>
-			<nav class="header_nav">
-				<a href="javascript:void(0);" class="header_nav--icon" onclick="toggleMobileNav()">
+		<header class="site__header">
+			<div class="header__logo"><img src="images/logo.svg" /></div>
+			<nav class="header__nav">
+				<a href="#" class="header__nav--icon" onclick="toggleMobileNav(event)">
 					<span></span>
 				</a>
-				<ul class="header_nav--list closed">
-					<li class="header_nav--list-item"><a onclick="smoothScrollTo('section-1')" href="javascript:void(0);">Section 1</a></li>
-					<li class="header_nav--list-item"><a onclick="smoothScrollTo('section-2')" href="javascript:void(0);">Section 2</a></li>
+				<ul class="header__nav--list closed">
+					<li class="header__nav--list-item"><a class="nav--link" href="#section-1">Section 1</a></li>
+					<li class="header__nav--list-item"><a class="nav--link" href="#section-2">Section 2</a></li>
 				</ul>
 			</nav>
 			
 		</header>
-		<main class="site_content">
+		<main class="site__content">
 			<article id="section-1" class="article">
-				<header class="article_header">
-					<h1>Et ludus instructior nec</h1>
-					<h2>Ferri sonet ullamcorper et mei, an magna consul civibus vel, eu mutat mucius ius. Mel et consul percipitur, his solum fierent moderatius in.</h2>
+				<header class="article__header">
+					<h1 class="article__heading">Et ludus instructior nec</h1>
+					<h2 class="article__subheading">Ferri sonet ullamcorper et mei, an magna consul civibus vel, eu mutat mucius ius. Mel et consul percipitur, his solum fierent moderatius in.</h2>
 				</header>
-				<section class="article_content">
+				<section class="article__content">
 					<img class="md-fl" src="https://via.placeholder.com/400x300/D6D5FC/FFFFFF" />
 					<div class="clearfix">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -47,40 +47,42 @@
 				</section>
 			</article>
 			<article id="section-2" class="article">
-				<header class="article_header">
-					<h1>Cum id mucius aperiam petentium</h1>
-					<h2>Ne eirmod appellantur sit, in qui veri ceteros persequeris. Ne tibique facilisi abhorreant pri, id per quidam sanctus evertitur, sed dico democritum id.</h2>
+				<header class="article__header">
+					<h1 class="article__heading">Cum id mucius aperiam petentium</h1>
+					<h2 class="article__subheading">Ne eirmod appellantur sit, in qui veri ceteros persequeris. Ne tibique facilisi abhorreant pri, id per quidam sanctus evertitur, sed dico democritum id.</h2>
 				</header>
-				<section class="article_gallery lg-grid">
-					<div class="gallery_image lg-col-4 active">
-						<img src="https://via.placeholder.com/400x300/8584A9/FFFFFF" />
-						<div class="gallery_image--caption top left">Everti nusquam ea cum, possim facilis an his, ut inani homero nostro quo.</div>
+				<section class="gallery">
+					<div class="gallery__container lg-grid">
+						<div class="gallery__image lg-col-4 active">
+							<img src="https://via.placeholder.com/400x300/8584A9/FFFFFF" />
+							<div class="gallery__image--caption top left">Everti nusquam ea cum, possim facilis an his, ut inani homero nostro quo.</div>
+						</div>
+						<div class="gallery__image lg-col-4">
+							<img src="https://via.placeholder.com/400x300/535374/FFFFFF" />
+							<div class="gallery__image--caption bottom right">Dicunt repudiandae quo et, eu partiendo dignissim mei, utroque omittantur ius te.</div>
+						</div>
+						<div class="gallery__image lg-col-4">
+							<img src="https://via.placeholder.com/400x300/6B6B8E/FFFFFF" />
+							<div class="gallery__image--caption top left">An his mnesarchum intellegam, nec quis debet atomorum te.</div>
+						</div>
+						<div class="gallery__image lg-col-4">
+							<img src="https://via.placeholder.com/400x300/3B3C5C/FFFFFF" />
+							<div class="gallery__image--caption bottom right">Sea admodum invidunt ei. Sea nobis vulputate et, ne brute aperiam torquatos.</div>
+						</div>
 					</div>
-					<div class="gallery_image lg-col-4">
-						<img src="https://via.placeholder.com/400x300/535374/FFFFFF" />
-						<div class="gallery_image--caption bottom right">Dicunt repudiandae quo et, eu partiendo dignissim mei, utroque omittantur ius te.</div>
-					</div>
-					<div class="gallery_image lg-col-4">
-						<img src="https://via.placeholder.com/400x300/6B6B8E/FFFFFF" />
-						<div class="gallery_image--caption top left">An his mnesarchum intellegam, nec quis debet atomorum te.</div>
-					</div>
-					<div class="gallery_image lg-col-4">
-						<img src="https://via.placeholder.com/400x300/3B3C5C/FFFFFF" />
-						<div class="gallery_image--caption bottom right">Sea admodum invidunt ei. Sea nobis vulputate et, ne brute aperiam torquatos.</div>
-					</div>
-					<a class="prev" onclick="activeSlide(-1)">&#10094;</a>
-					<a class="next" onclick="activeSlide(1)">&#10095;</a>
+					<a class="gallery__button prev" onclick="activeSlide(-1)">&#10094;</a>
+					<a class="gallery__button next" onclick="activeSlide(1)">&#10095;</a>
 				</section>
 			</article>
 		</main>
-		<footer class="site_footer">
+		<footer class="site__footer">
 			<ul class="footer-nav">
-				<li><a onclick="smoothScrollTo('section-1')" href="javascript:void(0);">Section 1</a></li>
-				<li><a onclick="smoothScrollTo('section-2')" href="javascript:void(0);">Section 2</a></li>
-				<li><a href="http://devhumor.com " target="_blank">Footer-link 1</a></li>
-				<li><a href="https://bit.ly/2ycc34S" target="_blank">Footer-link 2</a></li>
+				<li><a class="nav--link" href="#section-1">Section 1</a></li>
+				<li><a class="nav--link" href="#section-2">Section 2</a></li>
+				<li><a class="nav--link" href="#section-1">Section 1</a></li>
+				<li><a class="nav--link" href="#section-2">Section 2</a></li>
 			</ul>
 		</footer>
-		<script src="js/script.js"></script>
+		<script src="dist/app.js"></script>
 	</body>
 </html>
